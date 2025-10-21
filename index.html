@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-    /* Minimal structural CSS (borders and basic layout) */
     :root { --max: 72rem; }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.5; }
@@ -29,19 +28,18 @@
 
     .photo { border: 1px dashed #9aa3b2; padding: .75rem; background: #fff; border-radius: .5rem; display: inline-block; }
 
-    /* Semantic CSS custom element (no JS) */
+    
     profile-card { display: block; border: 1px solid #c9cdd4; padding: .75rem; border-radius: .5rem; margin-block: .75rem; }
 
     footer { background: #f5f7fb; text-align: center; padding: 1rem; }
 
-    /* Screen-reader only utility */
+    
     .visually-hidden {
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
     }
   </style>
 
-  <!-- Hello-world console custom element (allowed; logs only) -->
   <script>
     class HelloWorldConsole extends HTMLElement {
       connectedCallback() { console.log("Hello world! <hello-world-console> mounted."); }
@@ -57,7 +55,6 @@
     <div class="container topbar">
       <div class="brand">Mohammed Ameen</div>
 
-      <!-- Top-right navigation -->
       <nav aria-label="Primary">
         <ul>
           <li><a href="health.html">Health</a></li>
@@ -72,7 +69,7 @@
   </header>
 
   <main class="container">
-    <!-- HERO -->
+    
     <section class="hero" aria-labelledby="welcome">
       <article>
         <h1 id="welcome">Welcome</h1>
@@ -82,14 +79,12 @@
           <br />
         </p>
 
-        <!-- Demo of ordered list (timeline) -->
         <h2>Education timeline</h2>
         <ol>
           <li><i>Skyline College</i> — A.A. in Mathematics</li>
           <li><i>UC San Diego</i> — Mathematics–Computer Science</li>
         </ol>
 
-        <!-- Semantic CSS custom element -->
         <profile-card>
           <h3>Technical skills</h3>
           <ul>
@@ -100,19 +95,16 @@
         </profile-card>
       </article>
 
-      <!-- Photo area -->
       <aside aria-labelledby="photo-h2">
         
         <div class="photo">
           <picture>
-            <!-- Use whichever you actually have; at least one must exist at this path -->
             <img src="assets/img/headshot.jpeg" width="400" height="400"/>
           </picture>
         </div>
       </aside>
     </section>
 
-    <!-- MEDIA / EMBEDS (iframe + svg) -->
     <section aria-labelledby="media">
 
       <article>
@@ -132,7 +124,6 @@
       </article>
     </section>
 
-    <!-- FORM (form + fieldset + legend + label + input + textarea + progress + button) -->
     <section aria-labelledby="contactform">
       <h2 id="contactform">Contact form</h2>
       <form action="#" method="post">
@@ -159,7 +150,6 @@
       </form>
     </section>
 
-    <!-- DIALOG (closed by default) -->
     <section aria-labelledby="dialog-sec">
       <h2 id="dialog-sec">Dialog</h2>
       <dialog id="note">
