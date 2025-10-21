@@ -6,12 +6,11 @@
   <meta name="description" content="Portfolio of Mohammed Ameen — Mathematics & Computer Science at UC San Diego" />
   <title>Mohammed Ameen — Portfolio</title>
 
-  <!-- (Optional) favicon & external stylesheet if you have them -->
   <link rel="icon" href="assets/img/favicon.ico" />
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-    /* Minimal structural CSS to put nav in the top-right and layout the hero */
+    /* --- Minimal structural CSS --- */
     :root { --max: 72rem; }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.5; }
@@ -31,14 +30,14 @@
     }
 
     .photo {
-      border: 1px dashed #9aa3b2; padding: .75rem; background: #fff; border-radius: .5rem;
+      border: 1px dashed #9aa3b2;
+      padding: .75rem;
+      background: #fff;
+      border-radius: .5rem;
       display: inline-block;
     }
-    .quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .75rem; margin-top: 1rem; }
-    .quick-links a { display: block; padding: .75rem 1rem; border: 1px solid #d7dbe3; border-radius: .5rem; text-decoration: none; color: inherit; background: #fff; }
-    .quick-links a:focus, .quick-links a:hover { background: #f2f5fb; }
 
-    footer { background: #f5f7fb; }
+    footer { background: #f5f7fb; text-align: center; padding: 1rem; }
   </style>
 </head>
 <body>
@@ -65,24 +64,14 @@
       <article>
         <h1 id="welcome">Welcome</h1>
         <p><strong>Math–CS @ UC San Diego.</strong> I’m Mohammed — I build data-structures and web projects in C/C++/Java/Python, and I’m passionate about weightlifting and a healthy lifestyle.</p>
-
-        <!-- Clickable cards to each page (also available in top-right nav) -->
-        <div class="quick-links" aria-label="Quick links">
-          <a href="health.html">Health</a>
-          <a href="fitness.html">Fitness / Bodybuilding</a>
-          <a href="contact.html">Contact</a>
-          <a href="resume.html">Resume</a>
-          <a href="projects/index.html">Projects</a>
-          <a href="about.html">About</a>
-        </div>
       </article>
 
-      <!-- Photo area: replace the src files with your image(s) -->
+      <!-- Photo area -->
       <aside>
         <h2 class="visually-hidden">Profile photo</h2>
         <div class="photo">
           <picture>
-            <!-- Swap these with your actual images -->
+            <!-- Replace with your actual images -->
             <source srcset="assets/img/headshot.avif" type="image/avif" />
             <source srcset="assets/img/headshot.webp" type="image/webp" />
             <img src="assets/img/headshot.jpg" width="480" height="480" alt="Headshot of Mohammed Ameen" />
