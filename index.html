@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/img/favicon.ico" />
 
   <style>
-    header, nav, main, section, article, aside, footer, .container, .photo { border: 1px solid #c9cdd4; }
+    header, nav, main, section, article, aside, footer, .photo { border: 1px solid #c9cdd4; }
     body { margin: 0; }
     nav ul { list-style: none; }
     img { display: block; }
@@ -35,28 +35,26 @@
   <hello-world-console></hello-world-console>
 
   <header>
-    <div class="container">
-      <div class="brand"><strong>Mohammed Ameen</strong></div>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="health.html">Health</a></li>
-          <li><a href="fitness.html">Fitness/Bodybuilding</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="projects/index.html">Projects</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-    </div>
+    <strong>Mohammed Ameen</strong> <span>Portfolio</span>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="health.html">Health</a></li>
+        <li><a href="fitness.html">Fitness/Bodybuilding</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects/index.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container">
+  <main>
     <section aria-labelledby="welcome">
       <article>
         <h1 id="welcome">Welcome</h1>
         <p>
           <strong>Math–CS @ UC San Diego.</strong>
-          <b>C/C++/Java/Python</b>.
+          <b>C/C++/Java/Python</b><br />
           Currently seeking <em>internships</em> in Fall 2025.
         </p>
 
@@ -80,7 +78,7 @@
         <h2 id="photo-h2">Photo</h2>
         <div class="photo">
           <picture>
-            <img src="./assets/img/headshot.jpeg" width="400" height="400" alt="Headshot of Mohammed Ameen" />
+            <img src="assets/img/headshot.jpeg" width="400" height="400" alt="Headshot of Mohammed Ameen" />
           </picture>
         </div>
       </aside>
@@ -88,7 +86,6 @@
 
     <section aria-labelledby="media">
       <h2 id="media">Media</h2>
-
       <article>
         <h3>Inline SVG</h3>
         <svg viewBox="0 0 120 20" role="img" aria-label="Simple filled bar">
@@ -96,7 +93,6 @@
           <rect x="0" y="0" width="85" height="20" fill="#3b82f6"></rect>
         </svg>
       </article>
-
       <article>
         <h3>Iframe</h3>
         <iframe
@@ -142,9 +138,7 @@
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Mohammed Ameen • <a href="contact.html">Get in touch</a></p>
-    </div>
+    <p>&copy; 2025 Mohammed Ameen • <a href="contact.html">Get in touch</a></p>
   </footer>
 </body>
 </html>
