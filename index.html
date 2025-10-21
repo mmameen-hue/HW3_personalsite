@@ -5,211 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Portfolio of Mohammed Ameen — Mathematics & Computer Science at UC San Diego" />
   <title>Mohammed Ameen — Portfolio</title>
+
+  <!-- (Optional) favicon & external stylesheet if you have them -->
   <link rel="icon" href="assets/img/favicon.ico" />
-  <link rel="preload" href="assets/css/main.css" as="style" />
   <link rel="stylesheet" href="assets/css/main.css" />
+
   <style>
-    /* --- Minimal CSS for structure; counts toward style* requirement --- */
+    /* Minimal structural CSS to put nav in the top-right and layout the hero */
     :root { --max: 72rem; }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height:1.5; }
-    header, nav, main, footer { padding: 1rem; }
-    header, footer { background: #f5f7fb; }
-    .container { max-width: var(--max); margin: 0 auto; }
-    nav ul { display:flex; gap:.75rem; list-style: none; padding:0; margin:0; flex-wrap: wrap; }
-    nav a { text-decoration:none; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; }
-    /* --- CSS‑semantic custom element: <profile-card> --- */
-    profile-card { display:block; border:1px dashed #999; padding:1rem; border-radius:.5rem; background:#fff; }
-    profile-card h3 { margin-top:0; }
-    /* Utility */
-    .visually-hidden{ position:absolute; left:-9999px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.5; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 1rem; }
+
+    header { background: #f5f7fb; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { font-weight: 700; font-size: 1.125rem; }
+    nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+    nav a { text-decoration: none; color: inherit; }
+    nav a:focus, nav a:hover { text-decoration: underline; }
+
+    main { padding-block: 1rem 2rem; }
+    .hero { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 768px) {
+      .hero { grid-template-columns: 1fr 1fr; align-items: center; }
+    }
+
+    .photo {
+      border: 1px dashed #9aa3b2; padding: .75rem; background: #fff; border-radius: .5rem;
+      display: inline-block;
+    }
+    .quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .75rem; margin-top: 1rem; }
+    .quick-links a { display: block; padding: .75rem 1rem; border: 1px solid #d7dbe3; border-radius: .5rem; text-decoration: none; color: inherit; background: #fff; }
+    .quick-links a:focus, .quick-links a:hover { background: #f2f5fb; }
+
+    footer { background: #f5f7fb; }
   </style>
-  
-</body>
-</html>
-
-
-<!-- =============================
-FILE: health.html
-============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Health — Mohammed Ameen</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-  <header class="container"><h1>Health</h1></header>
-  <main class="container">
-    <section>
-      <h2>Healthy Lifestyle</h2>
-      <p>Notes on recovery, sleep, and nutrition that support both learning and lifting.</p>
-      <article>
-        <h3>Simple Checklist</h3>
+  <header>
+    <div class="container topbar">
+      <div class="brand">Mohammed Ameen</div>
+
+      <!-- Top-right navigation -->
+      <nav aria-label="Primary">
         <ul>
-          <li>7–9 hours of sleep</li>
-          <li>Hydration and whole foods</li>
-          <li>Mobility work and walking</li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="fitness.html">Fitness/Bodybuilding</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="projects/index.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="welcome">
+      <article>
+        <h1 id="welcome">Welcome</h1>
+        <p><strong>Math–CS @ UC San Diego.</strong> I’m Mohammed — I build data-structures and web projects in C/C++/Java/Python, and I’m passionate about weightlifting and a healthy lifestyle.</p>
+
+        <!-- Clickable cards to each page (also available in top-right nav) -->
+        <div class="quick-links" aria-label="Quick links">
+          <a href="health.html">Health</a>
+          <a href="fitness.html">Fitness / Bodybuilding</a>
+          <a href="contact.html">Contact</a>
+          <a href="resume.html">Resume</a>
+          <a href="projects/index.html">Projects</a>
+          <a href="about.html">About</a>
+        </div>
       </article>
+
+      <!-- Photo area: replace the src files with your image(s) -->
+      <aside>
+        <h2 class="visually-hidden">Profile photo</h2>
+        <div class="photo">
+          <picture>
+            <!-- Swap these with your actual images -->
+            <source srcset="assets/img/headshot.avif" type="image/avif" />
+            <source srcset="assets/img/headshot.webp" type="image/webp" />
+            <img src="assets/img/headshot.jpg" width="480" height="480" alt="Headshot of Mohammed Ameen" />
+          </picture>
+        </div>
+      </aside>
     </section>
   </main>
-  <footer class="container"><p><a href="index.html">Back to Home</a></p></footer>
-</body>
-</html>
 
-
-<!-- =============================
-FILE: about.html
-============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Mohammed Ameen</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body>
-  <header class="container"><h1>About</h1></header>
-  <main class="container">
-    <section>
-      <h2>Bio</h2>
-      <p>Mohammed is studying Mathematics and Computer Science at UC San Diego. Mohammed received his Associates in Mathematics from Skyline College and transferred to UC San Diego. Mohammed’s technical skills are C, C++, Java, Python, MATLAB, R‑programming, and web development. Mohammed is also passionate about weightlifting and a healthy lifestyle.</p>
-    </section>
-  </main>
-  <footer class="container"><p><a href="index.html">Back to Home</a></p></footer>
-</body>
-</html>
-
-
-<!-- =============================
-FILE: projects/index.html
-============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects — Mohammed Ameen</title>
-  <link rel="stylesheet" href="../assets/css/main.css" />
-</head>
-<body>
-  <header class="container"><h1>Projects</h1></header>
-  <main class="container">
-    <section>
-      <h2>Featured</h2>
-      <ul>
-        <li><a href="multiway-trie.html">Multiway Trie (C++)</a></li>
-        <li><a href="huffman-coding.html">Huffman Coding (C++)</a></li>
-        <li><a href="graph-algos.html">Graph Algorithms (Dijkstra/BFS)</a></li>
-        <li><a href="mo-fit-club.html">Mo Fit Club (Web)</a></li>
-      </ul>
-    </section>
-  </main>
-  <footer class="container"><p><a href="../index.html">Back to Home</a></p></footer>
-</body>
-</html>
-
-
-<!-- =============================
-FILE: resume.html
-============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume — Mohammed Ameen</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body>
-  <header class="container"><h1>Resume</h1></header>
-  <main class="container">
-    <article>
-      <h2>Education</h2>
-      <p>UC San Diego — Math–CS; Skyline College — A.A. Mathematics.</p>
-    </article>
-  </main>
-  <footer class="container"><p><a href="index.html">Back to Home</a></p></footer>
-</body>
-</html>
-
-
-<!-- =============================
-FILE: blog/index.html
-============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog — Mohammed Ameen</title>
-  <link rel="stylesheet" href="../assets/css/main.css" />
-</head>
-<body>
-  <header class="container"><h1>Blog</h1></header>
-  <main class="container">
-    <article>
-      <h2>Implementing a Huffman Coder in C++</h2>
-      <p>Notes and lessons from building a compressor and decompressor.</p>
-    </article>
-  </main>
-  <footer class="container"><p><a href="../index.html">Back to Home</a></p></footer>
-</body>
-</html>
-
-
-<!-- =============================
-FILE: fitness.html
-============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fitness — Mohammed Ameen</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body>
-  <header class="container"><h1>Fitness</h1></header>
-  <main class="container">
-    <section>
-      <h2>Training Philosophy</h2>
-      <p>Consistency, progressive overload, and recovery principles inform both my lifting and my engineering practice.</p>
-    </section>
-  </main>
-  <footer class="container"><p><a href="index.html">Back to Home</a></p></footer>
-</body>
-</html>
-
-
-<!-- =============================
-FILE: contact.html
-============================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Mohammed Ameen</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body>
-  <header class="container"><h1>Contact</h1></header>
-  <main class="container">
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Reach out</legend>
-        <p><label for="cname">Name</label> <input id="cname" name="cname" type="text" /></p>
-        <p><label for="cemail">Email</label> <input id="cemail" name="cemail" type="email" /></p>
-        <p><label for="cmsg">Message</label> <textarea id="cmsg" name="cmsg"></textarea></p>
-        <button type="submit">Send</button>
-      </fieldset>
-    </form>
-  </main>
-  <footer class="container"><p><a href="index.html">Back to Home</a></p></footer>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mohammed Ameen • <a href="contact.html">Get in touch</a></p>
+    </div>
+  </footer>
 </body>
 </html>
