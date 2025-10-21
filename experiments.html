@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Experiments — required elements demo" />
+  <title>experiments.html</title>
+
+  <style>
+    header, main, section, article, footer, figure { border: 1px solid #c9cdd4; }
+    body { margin: 0; }
+    img { display: block; }
+    figure { margin: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Experiments</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Template</h2>
+      <template id="card-template">
+        <article>
+          <h3>Template Example</h3>
+          <p>Hidden template content.</p>
+        </article>
+      </template>
+    </section>
+
+    <section>
+      <h2>Picture</h2>
+      <picture>
+        <source type="image/avif" srcset="assets/img/headshot.avif" media="(min-width: 800px)" />
+        <source type="image/webp" srcset="assets/img/headshot-400.webp" media="(max-width: 799px)" />
+        <img src="./assets/img/headshot.jpeg" width="400" height="400" alt="Headshot of Mohammed Ameen" />
+      </picture>
+    </section>
+
+    <section>
+      <h2>Audio</h2>
+      <audio controls>
+        <source src="assets/media/theme.ogg" type="audio/ogg" />
+        <source src="assets/media/theme.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <section>
+      <h2>Video</h2>
+      <video controls width="480" poster="assets/media/poster.jpg">
+        <source src="assets/media/demo.webm" type="video/webm" />
+        <source src="assets/media/demo.mp4" type="video/mp4" />
+        <track kind="captions" srclang="en" label="English" src="assets/media/demo.en.vtt" default />
+      </video>
+    </section>
+
+    <section>
+      <h2>Canvas</h2>
+      <canvas id="demoCanvas" width="320" height="120"></canvas>
+      <script>
+        const c = document.getElementById('demoCanvas');
+        const ctx = c.getContext('2d');
+        ctx.fillStyle = '#e8eef9';
+        ctx.fillRect(0, 0, 320, 120);
+        ctx.fillStyle = '#3b82f6';
+        ctx.fillRect(10, 10, 300, 40);
+        ctx.fillStyle = '#111827';
+        ctx.font = '16px system-ui';
+        ctx.fillText('Canvas demo', 10, 80);
+      </script>
+    </section>
+
+    <section>
+      <h2>Source</h2>
+      <ul>
+        <li>Used in picture</li>
+        <li>Used in audio</li>
+        <li>Used in video</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mohammed Ameen</p>
+  </footer>
+</body>
+</html>
