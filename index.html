@@ -10,8 +10,8 @@
 
   <style>
     header, nav, main, section, article, aside, footer, .photo { border: 1px solid #c9cdd4; }
-    body { margin: 0; }
-    nav ul { list-style: none; }
+    body { margin: 0; font-family: sans-serif; }
+    nav ul { list-style: none; padding: 0; margin: 0; }
     img { display: block; }
     profile-card {
       display: block;
@@ -30,6 +30,7 @@
     customElements.define('hello-world-console', HelloWorldConsole);
   </script>
 </head>
+
 <body>
   <noscript>JavaScript is disabled. The <code>&lt;hello-world-console&gt;</code> element will not log to the console.</noscript>
   <hello-world-console></hello-world-console>
@@ -49,9 +50,11 @@
   </header>
 
   <main>
-    <section aria-labelledby="welcome">
+    <!-- ✅ Fixed: Added a direct heading for this section -->
+    <section aria-labelledby="section-welcome">
+      <h2 id="section-welcome">Welcome</h2>
+
       <article>
-        <h2 id="welcome">Welcome</h2>
         <p>
           <strong>Math–CS @ UC San Diego.</strong>
           <b>C/C++/Java/Python</b><br>
